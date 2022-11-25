@@ -10,7 +10,7 @@ if len(sys.argv) < 2:
     exit(1)
 
 problem_link = sys.argv[1]
-# scrape problem name from h1 tag till before child nobr tag
+# scrape problem name from h1 tag till before the word 'solved'
 page = requests.get(problem_link)
 soup = BeautifulSoup(page.content, 'html.parser')
 problem_name = soup.find('h1').text.split('solved')[0].strip()
@@ -23,7 +23,7 @@ print('Created folder')
 # create .py file
 with open(f'{problem_name}/{problem_name.lower().replace(" ", "_")}.py', 'w') as f:
     f.write('def solution():\n    pass\n\n\n')
-    f.write(f"with open().txt', 'r') as f:\n    pass\n\n\n")
+    f.write(f"with open('.txt', 'r') as f:\n    pass\n\n")
     f.write(f'ans = solution()\nprint(ans)')
 print('Created .py file')
 
