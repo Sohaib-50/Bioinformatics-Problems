@@ -1,9 +1,9 @@
-def solution():
+def RNA_to_protein(RNA):
     pass
 
 
 with open('.txt', 'r') as f:
-    pass
+    RNA = f.read().strip()
 
-ans = solution()
+ans = RNA_to_protein(RNA)   
 print(ans)
