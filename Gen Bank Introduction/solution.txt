@@ -1,0 +1,1 @@
+Paramphistomum[Organism] AND (2003/06/11[Publication Date] : 2011/02/06[Publication Date]) 
