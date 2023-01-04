@@ -29,7 +29,7 @@ def get_fasta_strings(file_name):
 
 def find_repeat(dna0, dna1):
     '''finds the inexact repeat r of 32-40 bp in the two dna strings that appears with slight modifications (each repeat differ by ≤3 changes/indels).'''
-    for i in range(32, 41):  # lengths of repeat
+    for i in range(32, 41):  # valid lengths of repeat
         for j in range(len(dna0) - i + 1):  # check all substrings of length i
             r = dna0[j : j + i]  # get the substring
             if r in dna1:  # if substring occurs in dna1
